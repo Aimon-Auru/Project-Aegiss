@@ -2,38 +2,44 @@
 
 Private, local-AI, offline-first Android survival platform in development.
 
-## Download the app foundation — 0.3.0
+## Current development APK — 0.4.0 vault
 
-[Download AEGIS-foundation-S25-0.3.0.apk](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-foundation-S25-0.3.0.apk)
+[Download AEGIS-vault-S25-0.4.0.apk](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-vault-S25-0.4.0.apk)
 
-[Installation and scope](FOUNDATION-INSTALL.md) · [APK checksums](apk/SHA256SUMS) · [Foundation notices](apk/FOUNDATION-THIRD-PARTY-NOTICES.txt)
+[Install / vault / backup instructions](VAULT-INSTALL.md) · [Checksums](apk/SHA256SUMS) · [Vault notices](apk/VAULT-THIRD-PARTY-NOTICES.txt)
 
-Install as a **separate app named AEGIS**. Keep **AEGIS Feasibility** installed to retain its imported test model and diagnostics. The two apps have different application IDs; this does not replace or migrate the test app.
+**Install over AEGIS 0.3.0 without uninstalling.** Same application/signing certificate, higher version code; pins and appearance remain. The separate AEGIS Feasibility application and imported model are untouched.
 
-Included in this first development increment:
+Open **Settings → Open private vault**. New development functionality:
 
-* Native Kotlin / Compose dashboard, Library, Device and Settings screens.
-* Search planned section names, open their status, and save pinned sections locally.
-* Saved system/dark/light appearance.
-* Refreshable device RAM/storage/API and sensor-presence information without reading location.
-* Versioned public Room catalog, initially empty; separate portable contracts/domain modules.
+* SQLCipher/Room encrypted notes with Android Keystore-protected keys.
+* Android PIN/pattern/password confirmation to create/open the vault.
+* Locking when the private activity pauses/backgrounds and after two minutes of inactivity.
+* Private window screenshot/recents protection; draft/recovery input cleared on locking.
+* Portable AES-256-GCM backup with a separately generated recovery code; staged restore followed by device authentication and atomic activation.
 
-**Emergency content, real maps, GPS navigation, the AI assistant, private vault and group communication are not included yet.** Library entries describe planned features. The existing test model is not automatically available in this separate app. No personal medical/family/location entry is enabled.
+**Use nonsensitive test notes until actual-device vault acceptance and security review are complete.** This debug-signed build is not production-qualified. Host tests do not execute Android Keystore hardware or ARM64 SQLCipher end to end. Previous encrypted generations are retained; cleanup and rollback browsing are not implemented. Backups contain notes only; keep the generated recovery code separately because AEGIS does not retain it.
 
-This is a **debug-signed development build**, not a completed emergency application. It compiles/targets Android 17/API 37, with Android 10/API 29 minimum and ARM64 native libraries for the S25 Ultra. Launch/layout acceptance on the actual phone remains pending for this new package.
+**33 automated host tests pass**, covering domain limits, backup encryption/tampering/malformed inputs, atomic pointer interruption, public/private schema separation, background/timeout draft clearing, secure-window flag and existing Compose behavior. All affected modules build and lint with zero errors. Retained warnings include newer dependencies/tooling, omitted ChromeOS/x86 support, two incompatible custom lifecycle lint checks and version-catalog placement. APK signature/lineage, permissions, component exposure, ARM64 native/ZIP 16 KB alignment and absent model weights were audited.
 
-The final cached build succeeded. **11 automated host tests passed**: six domain readiness checks, three Room/storage checks and two Compose UI tests including activity recreation. APK audit verifies permissions, only the launcher exported, disabled backup/cleartext, valid signature, ARM64 native ELF and ZIP alignment for 16 KB pages, bundled notices and absent model weights. Lint has no errors; warnings include newer dependency versions, omitted ChromeOS/x86 support and two incompatible library lifecycle lint checks that are skipped. Host checks do not certify physical-device behavior or production security.
+No INTERNET, location, camera, microphone or nearby-device permission is added. AndroidX retains only its app-scoped signature guard permission. This version targets Android 17/API 37, minimum Android 10/API 29, ARM64 for the S25 Ultra development target. Biometric-only unlock, family/medical forms, live location sharing and group communication are not implemented.
 
-The app has no INTERNET, location, camera, microphone or nearby-device permission. AndroidX adds only its app-scoped signature guard permission for nonexported receivers. No account, telemetry or server is required. Pins and appearance are nonsensitive local data; this public catalog is not an encrypted vault.
+The native dashboard, Library, Device and Settings remain. **Operational survival/first-aid/species content, real maps and the AI assistant are still pending.** The Library correctly has no installed guide packages. The feasibility model is not integrated into this app yet.
 
-APK SHA-256:
+APK: 30,804,745 bytes. SHA-256:
 
 ```text
-1652e21e7b652982d0b07821c34ec196f2891e836d6a36f0cb989f85646e2bfe
+6fc83a1ce98242d67817ef35263eee90b5921faeaa1c049e8ac97f69d315c5af
 ```
 
-## Separate feasibility tool — 0.2.0
+## Previous foundation — 0.3.0
 
-[Download AEGIS-feasibility-S25-0.2.0.apk](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-feasibility-S25-0.2.0.apk) · [Benchmark instructions](LOCAL-AI-BENCHMARK.md) · [Probe notices](apk/THIRD-PARTY-NOTICES.txt)
+[Download foundation APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-foundation-S25-0.3.0.apk) · [Foundation instructions](FOUNDATION-INSTALL.md)
 
-The older diagnostic application retains synthetic storage checks, the green-dot offline map fixture and optional fixed-prompt LiteRT-LM CPU benchmarks with a separately imported 347 MB model. It remains a test tool. Earlier APKs stay in `apk/`; no new benchmark rerun is required just to install the foundation.
+The initial AEGIS application introduced Home/Library/Device/Settings, saved section pins and appearance, a public Room catalog and permissionless hardware-presence snapshots. Install the current 0.4.0 update over it; do not downgrade a populated vault.
+
+## Separate feasibility application — 0.2.0
+
+[Download feasibility APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-feasibility-S25-0.2.0.apk) · [Benchmark instructions](LOCAL-AI-BENCHMARK.md) · [Probe notices](apk/THIRD-PARTY-NOTICES.txt)
+
+The diagnostic app retains synthetic storage checks, the local green-dot map fixture and fixed-prompt LiteRT-LM CPU benchmarks with a separately imported model. Its data/model stay separate from AEGIS. No old benchmark rerun is required merely to install the current app update.
