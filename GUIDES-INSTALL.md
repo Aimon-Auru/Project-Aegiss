@@ -1,0 +1,17 @@
+# AEGIS 0.5.0 — offline guides and language packs
+
+Install **AEGIS-guides-S25-0.5.0.apk over your existing AEGIS 0.3 or 0.4**, without uninstalling. Same package and development signer, higher version code. Pins, appearance and the separate private vault remain. Do not uninstall AEGIS Feasibility if retaining its imported test model.
+
+Open **Library**. Eight English guides are included: Ten Essentials, trip planning, conditions checks, preparing offline maps in another app, map scale, contours, north references and GPS limitations. Search their text, save bookmarks and open a guide to see its illustration, numbered points, applicability, source and review status. Reading needs no account, connection, AI model or vault unlock.
+
+Open **Library → Guide packs** to see exact file sizes, uncompressed payload sizes, languages, versions, coverage, checksums and installed state. Optional Filipino and Czech packs translate the eight guides. Tap **Download in browser** while connected; after the download, return to Guide packs → **Install a local .aegispack file** and choose it. AEGIS checks the publisher signature, hashes, schema and edition before installing locally. Use the language filters in Library after installation. You can keep several languages installed. Invalid or older packs are rejected without erasing existing guides; reinstalling the identical edition is harmless.
+
+The language packs translate guide bodies and captions, not the app controls, original sources or schematic labels. Filipino and Czech are clearly marked developer draft translations, without independent language/specialist review. English is source-checked general-reference content, also without specialist approval. These packs are not reviewed first aid, species edibility guidance or operational emergency procedures.
+
+Download sizes are small because these are eight concise text guides with seven diagrams drawn by the app and one small public-domain USGS image. The APK is separate from those packs. Payload size counts text/image bytes before compression; database indexes, temporary installation files and metadata add storage overhead. Geographic maps, detailed photographic species packs and local AI weights are separate future downloads, not included here. You do not need 20 GB for this update.
+
+AEGIS itself has no internet permission or automatic network requests. Explicitly opening a source or download uses your external browser and needs a connection. Reading/searching installed packs works offline. No location, camera, microphone, storage or nearby-device permissions are added. ARM64 build, minimum Android10/API29, target Android17/API37. Native S25 Ultra checks for this new version remain pending; host tests and development signing do not establish production security or medical approval.
+
+The 0.4 development vault remains available under Settings. Use nonsensitive test notes until native authentication/SQLCipher/recovery review is complete. This update does not add clinical procedures, plant/mushroom/animal edibility decisions, real geographic maps, tracking, radio operation or the in-app AI assistant. The app displays the scope explicitly.
+
+For this version, confirm the Library shows 8 offline guides after installation, open a guide in airplane mode, save it and reopen the app, and optionally import a language pack before testing it offline. Earlier feasibility tests do not need to be repeated.
