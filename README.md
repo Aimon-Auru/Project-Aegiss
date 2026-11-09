@@ -1,43 +1,53 @@
 # PROJECT AEGIS
 
-Private, offline-first Android field companion in development. Primary target: Samsung Galaxy S25 Ultra, Android 17/API 37.
+Private, offline-first Android survival platform in development. Primary target: Samsung Galaxy S25 Ultra, Android17/API37.
 
-## Current APK: 0.5.0 guides
+## Current development APK — 0.6.0 field tools
 
-[Download AEGIS 0.5.0](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-guides-S25-0.5.0.apk)
+[Download AEGIS 0.6.0](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-fieldtools-S25-0.6.0.apk)
 
-Install over AEGIS 0.3/0.4 **without uninstalling**. Same package and development signer; pins, appearance and the private vault remain. The separate feasibility app and its imported model stay separate.
+**Install over your existing AEGIS without uninstalling.** Same package/development signer, versionCode4. Guides, language packs, bookmarks, pins and appearance remain. The private vault migrates v1→v2 and retains existing notes. Do not downgrade afterwards. The separate Feasibility app and its imported test model remain separate.
 
-[Installation and language packs](GUIDES-INSTALL.md) · [Checksums](apk/SHA256SUMS) · [Notices](apk/GUIDES-THIRD-PARTY-NOTICES.txt)
+[Installation and workflows](FIELDTOOLS-INSTALL.md) · [Checksums](apk/SHA256SUMS) · [Notices](apk/FIELDTOOLS-THIRD-PARTY-NOTICES.txt)
 
-This release adds eight usable offline planning/map-reading guides, illustrations, source attribution, full-text search and saved bookmarks. Topics: Ten Essentials, trip planning, conditions checks, preparing another app's offline maps, map scale, contours, north references and GPS accuracy limits. Guides work without a model, vault unlock, account or connection.
+### Working features
 
-**Library → Guide packs** shows actual download/payload size, language, coverage, edition, checksum and installation status. Optional downloads open your external browser; return to AEGIS to import the signed `.aegispack` file. Installed packs then work offline. App controls, diagram labels and original source documents remain English.
+- **Kit inventory:** encrypted supplies with quantity/unit, category, storage, expiry/replacement, priority and notes. Create/edit/delete, search and review-due filter. Exact quantities to three decimal places; no recommended medical doses or supply amounts.
+- **Household checklists:** 11 scenario categories, custom editable tasks, completion state and optional organizing prompts. Planning records, not emergency response procedures.
+- **Private waypoints:** named WGS84 coordinates, edit/delete and straight-line distance/initial true bearing. User-entered destinations are unverified.
+- **Foreground GPS/GNSS:** explicit Start GPS and runtime location consent; actual fix/accuracy/age/time and available speed/ellipsoidal altitude. No Google Play services or internet requirement.
+- **Magnetic compass:** native accelerometer/magnetometer readings, rotation correction and visible stale/unreliable/missing readings. Magnetic north differs from the separately labelled true target bearing; declination correction is not implemented.
+- **Foreground tracks:** up to 1,000 recent points reporting ≤50m horizontal accuracy, relative sketch and first-point return target. No geographic map or safe route is implied.
+- **GPX export:** explicit warning and user-selected file. GPX contains unencrypted location/time data. Live subscriptions and positions stop/clear when leaving; export before leaving if you need a file. No background or remote tracking.
+- **Recovery:** encrypted v2 backup covers notes, inventory, tasks and waypoints with a separately generated recovery key. Reads legacy v1 notes-only backups. Restore replaces ALL active record types, not a merge; the app warns about older backups.
+- **Offline library:** eight illustrated, source-checked general planning/map-reading guides, full-text search, bookmarks and optional signed guide-language packs. No vault unlock or model is needed to read them.
 
-| Content language | Guides | Download | Uncompressed text/image payload | Status |
+Open **Home → Open kit and household plans**, or **Home → Open GPS and compass**. Private records require Android screen-lock authentication. GPS requests precise location only when started; permission refusal does not block the library/inventory. Hardware is optional. The app has no INTERNET, camera, microphone, nearby, background-location or storage permission. Navigation is nonexported and uses a secure window.
+
+### Downloadable guide languages
+
+Library → Guide packs shows edition, measured file/payload size, coverage, review status and installation state. Download through the external browser, then import the signed `.aegispack` file. Installed guides work offline. App controls and original sources remain English.
+
+| Content language | Guides | Download | Uncompressed payload | Status |
 | --- | ---: | ---: | ---: | --- |
-| [English](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-1.aegispack) | 8 | 33,635 bytes | 50,429 bytes | Included; source-checked general reference |
-| [Filipino](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-fil-1.aegispack) | 8 | 33,709 bytes | 51,459 bytes | Optional developer draft translation |
-| [Czech / Čeština](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-cs-1.aegispack) | 8 | 34,083 bytes | 51,037 bytes | Optional developer draft translation |
+| [English](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-1.aegispack) | 8 | 33,635 bytes | 50,429 bytes | Included, general reference |
+| [Filipino](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-fil-1.aegispack) | 8 | 33,709 bytes | 51,459 bytes | Optional draft translation |
+| [Czech / Čeština](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-cs-1.aegispack) | 8 | 34,083 bytes | 51,037 bytes | Optional draft translation |
 
-Payload is not total installed database size: indexes, metadata and temporary files add overhead. These are short starter references, mostly text with app-drawn diagrams and one small USGS public-domain image. Geographic maps and AI weights are separate future packages. No proprietary app database was copied.
+Database/index/temporary files add overhead to payload size. These are concise starter guides, not full encyclopedias. English lacks specialist review; translations also lack independent language review. Older guides retain their dated 0.5 examples; current live tools are separate native features.
 
-English has no specialist review; optional translations also lack independent language review. **Reviewed first aid, plants/mushrooms/animal edibility references, real geographic maps, tracking, country/radio data and the in-app AI assistant are not included.** This is a partial development application, not the full survival platform or an operational emergency release.
+### Validation and limits
 
-Existing 0.4 vault features remain: Keystore-protected encrypted notes, Android device-credential confirmation, background/timeout locking, encrypted backup with a separate recovery code, and staged restore. Use nonsensitive test notes until native device authentication/SQLCipher/recovery testing and security review are complete. [Vault instructions](VAULT-INSTALL.md).
+**75 automated host tests pass; build/lint have zero errors.** Checks cover v1 database migrations with retained records, full backup and legacy compatibility/tampering, inventory/plan/waypoint CRUD, decimal/date/coordinate edge cases, public/private separation, UI entry/task/return-target actions, permission refusal/subscription cleanup, GPX content and earlier guide/vault behavior. APK signer continuity, merged permissions/nonexported components, signed pack integrity and 16KiB native/ZIP alignment were audited. Retained warnings concern dependency/tooling updates, x86/ChromeOS omission, two incompatible custom lifecycle lint checks and version-catalog placement.
 
-No INTERNET, location, camera, microphone, storage or nearby-device permission is added. Only the app-scoped AndroidX receiver guard remains. Only the launcher is exported. ARM64; minimum Android10/API29, target Android17/API37. New-version physical S25 Ultra acceptance remains pending; earlier feasibility results are retained and need not be repeated.
+Native GPS/compass accuracy, Keystore/SQLCipher upgrades and One UI behavior still require physical S25 verification. Host tests are not device, security, clinical or translation approval. Use nonsensitive private test records until those checks are complete. Minimum Android10/API29, target Android17/API37, ARM64, development signing.
 
-**56 automated host tests pass; build and lint have zero errors.** Tests cover actual v1→v2 migration, retained pins/bookmarks, FTS queries, signature/hash/edition/role rejection, actual JPEG decode, language imports and existing vault regressions. APK permission/component exposure, signer continuity, native/ZIP 16 KiB alignment and embedded/downloadable pack integrity were audited. Retained warnings include newer dependencies/tooling, omitted ChromeOS/x86 support, two incompatible custom lifecycle lint checks and version-catalog placement. This is not independent security, clinical, translation or physical-device certification.
+**This does not complete the master specification.** Reviewed first aid, plant/mushroom/animal edibility references, geographic maps/routing, persistent/background tracks, private-group communications, country/radio datasets, integrated AI/RAG and production hardening remain unfinished. No unsupported emergency instructions or edibility verdicts are supplied.
 
-APK: 32,348,740 bytes. SHA-256:
+APK: 32,617,272 bytes. SHA-256:
 
 ```text
-2ecc15740896dca1a0a35134245984237ed278d977f825811f10a81a4dbcf245
+2fe1c0b4a8edad02ed33dfe6d814184ef13d11393e7a4854471f9332deddd6c4
 ```
 
-## Earlier builds
-
-[0.4 vault APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-vault-S25-0.4.0.apk) · [0.3 foundation APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-foundation-S25-0.3.0.apk). Prefer the current version; do not downgrade a populated database.
-
-[Separate 0.2 feasibility APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-feasibility-S25-0.2.0.apk) · [Benchmark instructions](LOCAL-AI-BENCHMARK.md). This diagnostic app contains synthetic storage/map/local-model trials, not the real field library.
+Earlier artifacts: [0.5 guide APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-guides-S25-0.5.0.apk), [0.4 vault APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-vault-S25-0.4.0.apk), [0.3 foundation APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-foundation-S25-0.3.0.apk). Prefer the current version; do not downgrade a populated database. [Separate 0.2 feasibility APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-feasibility-S25-0.2.0.apk) and [benchmark instructions](LOCAL-AI-BENCHMARK.md) remain historical diagnostics. No repeat of those earlier tests is required to install this update.

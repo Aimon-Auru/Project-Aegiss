@@ -1,0 +1,115 @@
+AEGIS field tools 0.6.0 development build
+
+AndroidX / Jetpack Compose / Material 3 / Activity / Lifecycle / Room / SQLite interfaces / DataStore
+Copyright The Android Open Source Project and respective contributors.
+Apache License 2.0, unless otherwise identified in individual source files.
+Sources: https://android.googlesource.com/platform/frameworks/support/
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+Kotlin standard library and kotlinx.coroutines
+Copyright JetBrains s.r.o. and respective contributors.
+Apache License 2.0.
+Sources: https://github.com/JetBrains/kotlin and https://github.com/Kotlin/kotlinx.coroutines
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+No LLM weights, map tiles, emergency corpus, reviewed medical material or model runtime
+is bundled in this foundation APK. Gradle/AGP/compiler/test tools are build-time
+dependencies, not app emergency capabilities. This preliminary development notice
+does not replace the production SBOM and complete transitive license review.
+
+SQLCipher for Android 4.20.0 and SQLCipher core
+Sources: https://github.com/sqlcipher/sqlcipher-android and https://github.com/sqlcipher/sqlcipher
+BSD-style licences reproduced below. SQLite is in the public domain.
+
+Copyright (c) 2008-2023, ZETETIC LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the ZETETIC LLC nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY ZETETIC LLC ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL ZETETIC LLC BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Copyright (c) 2025, ZETETIC LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the ZETETIC LLC nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY ZETETIC LLC ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL ZETETIC LLC BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+OpenSSL components: Apache License 2.0; https://www.openssl.org/
+The full Apache 2.0 licence is bundled under assets/licenses/Apache-2.0.txt.
+
+
+FIELD BASICS PACK, EDITION 1 (general references, not reviewed emergency procedures)
+The eight guides are original explanatory text based on the cited official references.
+Seven illustrations are original AEGIS explanatory schematics drawn by the application.
+Source access dates, source snapshot hashes, applicability and rights references are
+included in every guide. No clinical, botanical or food-safety review is claimed.
+
+National Park Service (NPS), U.S. Department of the Interior
+Factual sources: Ten Essentials, Trip Planning Guide, Hiking Safety, NPS App Guide.
+https://www.nps.gov/articles/10essentials.htm
+https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm
+https://www.nps.gov/articles/hiking-safety.htm
+https://www.nps.gov/articles/000/appguide.htm
+Rights: https://www.nps.gov/aboutus/disclaimer.htm
+No NPS logo or third-party NPS infographic is reproduced.
+
+U.S. Geological Survey (USGS), U.S. Department of the Interior
+Factual sources: What is a topographic map?; north arrows on USGS maps.
+https://www.usgs.gov/faqs/what-a-topographic-map
+https://www.usgs.gov/faqs/what-do-different-north-arrows-a-usgs-topographic-map-mean
+The small unmodified image of US Topo north arrows is identified as PUBLIC DOMAIN
+by its USGS media page: https://www.usgs.gov/media/images/north-arrows-us-topo-map
+Its example angles are not current declination for the user's location.
+Rights: https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits
+
+GPS.gov / U.S. government: GPS Accuracy
+https://www.gps.gov/gps-accuracy
+The guide paraphrases general causes of positioning error; it does not guarantee a
+specific accuracy, claim a current location fix or display actual geographic coverage.
+
+AEGIS claims no copyright in original U.S. government works. Agency attribution does
+not imply agency endorsement. Individual third-party material is not automatically
+public domain. No proprietary app database has been copied into this pack.
+
+Optional Filipino and Czech packs contain developer draft translations of the eight
+general guides. Independent language/specialist review has not been performed.
+Sources and original USGS image remain in their original language. App controls and
+schematic labels remain English; each translated diagram has translated alt text.
