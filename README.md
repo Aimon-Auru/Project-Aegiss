@@ -2,33 +2,38 @@
 
 Private, local-AI, offline-first Android survival platform in development.
 
-## Download the feasibility APK — 0.2.0
+## Download the app foundation — 0.3.0
 
-[Download AEGIS-feasibility-S25-0.2.0.apk](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-feasibility-S25-0.2.0.apk)
+[Download AEGIS-foundation-S25-0.3.0.apk](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-foundation-S25-0.3.0.apk)
 
-[Local-AI benchmark instructions](LOCAL-AI-BENCHMARK.md) · [APK checksums](apk/SHA256SUMS) · [Third-party notices](apk/THIRD-PARTY-NOTICES.txt)
+[Installation and scope](FOUNDATION-INSTALL.md) · [APK checksums](apk/SHA256SUMS) · [Foundation notices](apk/FOUNDATION-THIRD-PARTY-NOTICES.txt)
 
-Install over the existing probe; the package/signing key is unchanged and version code is higher. Confirm `0.2.0-feasibility` is displayed.
+Install as a **separate app named AEGIS**. Keep **AEGIS Feasibility** installed to retain its imported test model and diagnostics. The two apps have different application IDs; this does not replace or migrate the test app.
 
-This is a **debug-signed feasibility tool**, not the completed survival application. It targets Android 17/API 37, supports Android 10/API 29+, and includes ARM64 native libraries. Earlier owner tests confirmed synthetic storage checks and the 0.1.1 local map fixture. Actual phone AI performance remains to be measured.
+Included in this first development increment:
 
-## New: local CPU inference benchmark
+* Native Kotlin / Compose dashboard, Library, Device and Settings screens.
+* Search planned section names, open their status, and save pinned sections locally.
+* Saved system/dark/light appearance.
+* Refreshable device RAM/storage/API and sensor-presence information without reading location.
+* Versioned public Room catalog, initially empty; separate portable contracts/domain modules.
 
-1. Open **Local AI benchmark**.
-2. **Download model in browser**: a public, separate **347 MB** Qwen3 0.6B INT4 no-think file. Offline transfer also works.
-3. **Import downloaded model** and wait for exact size/SHA-256 verification.
-4. **Run CPU smoke test**, then **Copy last benchmark report** and share it before starting another test.
+**Emergency content, real maps, GPS navigation, the AI assistant, private vault and group communication are not included yet.** Library entries describe planned features. The existing test model is not automatically available in this separate app. No personal medical/family/location entry is enabled.
 
-[Full instructions and pinned model download](LOCAL-AI-BENCHMARK.md). Three-trial and automatic-cancellation controls are also available. The runtime is LiteRT-LM 0.19.1 with two CPU threads; it is an experimental candidate, not a final production selection. Generated output is unverified and comes only from fixed nonmedical synthetic prompts.
+This is a **debug-signed development build**, not a completed emergency application. It compiles/targets Android 17/API 37, with Android 10/API 29 minimum and ARM64 native libraries for the S25 Ultra. Launch/layout acceptance on the actual phone remains pending for this new package.
 
-The APK has **no INTERNET, location, camera or microphone permission**. The optional browser download is external; inference uses the verified local file. No private prompt/profile, remote AI API, reviewed emergency guidance or family communication is included. Storage/maps remain usable without a model. AI runs in a separate nonexported worker with resource, cancellation and cleanup guards.
+The final cached build succeeded. **11 automated host tests passed**: six domain readiness checks, three Room/storage checks and two Compose UI tests including activity recreation. APK audit verifies permissions, only the launcher exported, disabled backup/cleartext, valid signature, ARM64 native ELF and ZIP alignment for 16 KB pages, bundled notices and absent model weights. Lint has no errors; warnings include newer dependency versions, omitted ChromeOS/x86 support and two incompatible library lifecycle lint checks that are skipped. Host checks do not certify physical-device behavior or production security.
 
-Build/lint, original signer continuity, API/ABI/permissions and 16 KB APK alignment passed. **26 Android host regression tests passed**, using fake inference engines for service tests. These do not establish actual phone inference speed, thermal/battery behavior, native cancellation, grounding or clinical reliability. The model download/hash was verified on the build host; no host/cloud model generation was performed.
+The app has no INTERNET, location, camera, microphone or nearby-device permission. AndroidX adds only its app-scoped signature guard permission for nonexported receivers. No account, telemetry or server is required. Pins and appearance are nonsensitive local data; this public catalog is not an encrypted vault.
 
 APK SHA-256:
 
 ```text
-fefb753fc1417eb504f00f694b14398e1674b1ea888a29cff8915add632a7336
+1652e21e7b652982d0b07821c34ec196f2891e836d6a36f0cb989f85646e2bfe
 ```
 
-Previous probes remain in `apk/`; the current download above is 0.2.0.
+## Separate feasibility tool — 0.2.0
+
+[Download AEGIS-feasibility-S25-0.2.0.apk](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-feasibility-S25-0.2.0.apk) · [Benchmark instructions](LOCAL-AI-BENCHMARK.md) · [Probe notices](apk/THIRD-PARTY-NOTICES.txt)
+
+The older diagnostic application retains synthetic storage checks, the green-dot offline map fixture and optional fixed-prompt LiteRT-LM CPU benchmarks with a separately imported 347 MB model. It remains a test tool. Earlier APKs stay in `apk/`; no new benchmark rerun is required just to install the foundation.

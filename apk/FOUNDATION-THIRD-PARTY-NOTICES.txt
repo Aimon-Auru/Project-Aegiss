@@ -1,0 +1,18 @@
+AEGIS foundation 0.3.0 development build
+
+AndroidX / Jetpack Compose / Material 3 / Activity / Lifecycle / Room / SQLite interfaces / DataStore
+Copyright The Android Open Source Project and respective contributors.
+Apache License 2.0, unless otherwise identified in individual source files.
+Sources: https://android.googlesource.com/platform/frameworks/support/
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+Kotlin standard library and kotlinx.coroutines
+Copyright JetBrains s.r.o. and respective contributors.
+Apache License 2.0.
+Sources: https://github.com/JetBrains/kotlin and https://github.com/Kotlin/kotlinx.coroutines
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+No LLM weights, map tiles, emergency corpus, reviewed medical material or model runtime
+is bundled in this foundation APK. Gradle/AGP/compiler/test tools are build-time
+dependencies, not app emergency capabilities. This preliminary development notice
+does not replace the production SBOM and complete transitive license review.
