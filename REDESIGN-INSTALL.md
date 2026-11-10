@@ -22,3 +22,13 @@ For the brighter appearance, choose **Settings → Appearance → Light**. Dark 
 **Guide downloads** shows real file sizes and language status. Get a pack through your browser, return and choose Add downloaded pack. English is included. Filipino and Czech are draft guide translations, not independently reviewed; app controls remain English. Existing edition-2 files still work.
 
 The redesign adds no permissions or accounts and retains the no-INTERNET app. The master project's unfinished medical/species, detailed maps, country/radio, family coordination and production requirements are unchanged. Host checks are not physical S25, security, clinical or language approval.
+
+## Smaller download if the APK transfer stalls
+
+Get **AEGIS-redesign-S25-0.9.0.zip (46.9 MB)**. It contains the same original 93,078,636-byte APK, with all features and the original signature unchanged.
+
+1. Download the ZIP using your browser.
+2. Open Samsung **My Files → Downloads**, tap the ZIP and choose **Extract**.
+3. Open the extracted folder and tap **AEGIS-redesign-S25-0.9.0.apk** to install over the existing app. Do not uninstall.
+
+The ZIP is a transfer wrapper, not an app update or a reduced-feature edition. Its extracted APK SHA-256 is `7ad5bb3efcac7876a9a5319e960cc89be76a8d6e072d28558a2db96a526f2e39`.

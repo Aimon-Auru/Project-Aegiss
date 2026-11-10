@@ -6,6 +6,8 @@ Private, offline-first Android field companion in development. Main target: Sams
 
 **[Download AEGIS 0.9.0 (93.1 MB)](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-redesign-S25-0.9.0.apk)**
 
+**Download getting stuck? [Try the smaller ZIP (46.9 MB)](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-redesign-S25-0.9.0.zip).** It contains the identical signed APK. On Samsung, open **My Files → Downloads**, tap the ZIP, choose **Extract**, then tap the APK inside to install. Keep your existing app installed.
+
 Open the link in Chrome outside ChatGPT if its in-app download gets stuck. The complete file is 93,078,636 bytes. Install **over your existing AEGIS without uninstalling**; keep your records and saved guides. Same package/development signer, versionCode 7. No database reset or migration is introduced. Do not downgrade.
 
 [Everyday use and installation](REDESIGN-INSTALL.md) · [Checksums](apk/SHA256SUMS) · [Licenses](apk/REDESIGN-THIRD-PARTY-NOTICES.txt)
