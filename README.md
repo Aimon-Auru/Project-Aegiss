@@ -1,67 +1,56 @@
 # PROJECT AEGIS
 
-Private, offline-first Android survival platform in development. Primary target: Samsung Galaxy S25 Ultra SM-S938B, Android 17 / API 37.
+Private, offline-first Android field companion in development. Main target: Samsung Galaxy S25 Ultra SM-S938B, Android 17 / API 37.
 
-## Current development APK — 0.8.0 illustrated guides
+## Current APK — 0.9.0 interface redesign
 
-[Download AEGIS 0.8.0](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-illustrated-S25-0.8.0.apk)
+**[Download AEGIS 0.9.0 (93.1 MB)](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-redesign-S25-0.9.0.apk)**
 
-**Install over your existing AEGIS without uninstalling.** Same package/development signer, versionCode 6. Existing notes, inventory, plans, waypoints, bookmarks, pins, settings and imported model remain. Public catalog/vault schemas remain v2; encrypted backups retain v2 with legacy v1 reads. Do not downgrade. The separate Feasibility app and its private model remain separate.
+Open the link in Chrome outside ChatGPT if its in-app download gets stuck. The complete file is 93,078,636 bytes. Install **over your existing AEGIS without uninstalling**; keep your records and saved guides. Same package/development signer, versionCode 7. No database reset or migration is introduced. Do not downgrade.
 
-[Picture/map/first-aid reference instructions](ILLUSTRATED-INSTALL.md) · [Field tools](FIELDTOOLS-INSTALL.md) · [Local assistant/model](ASSISTANT-INSTALL.md) · [Checksums](apk/SHA256SUMS) · [Notices](apk/ILLUSTRATED-THIRD-PARTY-NOTICES.txt)
+[Everyday use and installation](REDESIGN-INSTALL.md) · [Checksums](apk/SHA256SUMS) · [Licenses](apk/REDESIGN-THIRD-PARTY-NOTICES.txt)
 
-The launcher icon now adapts the user-supplied gold-A/compass/forest brand into an Android adaptive icon. Small text and symbols were removed for legibility; regular and round launcher masks share the padded artwork. Native host rendering is checked; physical Samsung launcher appearance remains unverified.
+### A clearer everyday interface
 
-### Pictures and tutorials
+- **Home:** picture banner and large First aid, Navigate, My kit and Ask AEGIS cards.
+- **Guides:** illustrated cards, search, language filters and familiar bookmark controls. The top bookmark opens saved guides.
+- **Tools:** useful functions grouped in one list, with plain descriptions.
+- **Settings:** Light/Dark/phone appearance, private notes/backups, privacy, phone details and app information. Hardware readings and developer details stay out of Home.
 
-Open **Library → Ranger → Leave a useful trip plan** for a detailed three-scene illustration, a completed fictional itinerary and a three-stage walkthrough. **Enlarge illustration** opens pinch/pan/zoom and reset. Packing, conditions and offline-map preparation also have detailed new pictures. All eight general guides have walkthroughs; map-reading topics include labelled numerical examples and the original USGS north-reference picture.
+The reader emphasizes pictures and steps. Sources/review remain available; hashes and full rights are under further details. Kit forms start with name/amount/unit; optional fields are grouped and dates use a calendar. Larger text switches action cards to a single column. Your gold-A/compass launcher icon is retained. The new home landscape is labelled in provenance as original AI-generated fictional decoration, not geographic evidence.
 
-The four original AI-generated illustrations are labelled fictional explanatory examples, not photographs, real routes, medical procedures or species identification. Sources, applicability and lack of specialist review remain visible. The guides work offline without a model, vault unlock or account. A real large-image database-loading failure was fixed; the old pack's bookmarks are retained during the included English edition-2 upgrade.
+### Existing functions remain
 
-### Actual offline world overview
+Offline planning/map-reading guides, search/bookmarks, signed language packs, encrypted supplies/checklists/places/notes, foreground location/compass/walks/GPX, coarse country map and optional local guide matching remain connected to their existing implementations. Public catalog and vault stay v2; encrypted backup v2 retains legacy v1 reads. Existing settings, shortcuts, records and imported model files remain. The separate Feasibility app stays separate; no repeat of those earlier diagnostics is required to install.
 
-Open **Home → Open offline world overview**, or Library → Navigation. The bundled public-domain Natural Earth 5.1.2 country/territory data supports country lookup and pan/zoom in MapLibre OpenGL. It is a **generalized 1:110 million overview**, approximately 85°S–85°N. Detailed regional maps are not installed: no roads, trails, elevation, live-position overlay or routing. Boundaries can be disputed/outdated. Its native rendering on the S25 is still unverified; the earlier green-dot probe was a separate synthetic test.
+**Navigate** starts GPS only on request. Its compass uses magnetic north; target bearings use true north. Return to start is a straight-line target, not a checked safe route. Walks clear when you leave; saving GPX explicitly warns about unencrypted coordinates/times. No background or remote tracking is supplied. The world map is a generalized Natural Earth country overview, approximately 85°S–85°N, without local roads/trails, elevation, live position or routes.
 
-All geography/style data is bundled; no tile/glyph/sprite requests, key or account are used. ACCESS_NETWORK_STATE is retained for MapLibre initialization. INTERNET and ACCESS_WIFI_STATE are removed from the merged app. The map does not request location; the separate GPS tool retains its explicit-start permission flow.
+**First aid** opens the original ERC illustrated handbook through an explicit browser download and your chosen local PDF viewer. The PDF is separate, copyrighted and not redistributed or clinically certified by AEGIS. Save it and check it opens after disconnecting. Reviewed in-app medical procedures remain unfinished.
 
-### First-aid picture reference from its publisher
-
-Open **Home → First aid: illustrated publisher handbook**, or **Library → First aid → Open illustrated publisher reference**. The official European Resuscitation Council 2025 English handbook includes the publisher's illustrations for resuscitation/AED/children/first aid. Choose **Download from ERC in browser**, save the original PDF while connected, then **Open a saved PDF** to select it for your external PDF viewer. Check the complete book opens after disconnecting. Observed publisher file size: **17,446,129 bytes (17.4 MB)**, checked 10 November 2026; the publisher can replace that URL's file.
-
-The handbook is a separate publication: **AEGIS does not bundle, copy, index or clinically certify it**. Copyright requires permission for redistribution, which has not been obtained. AEGIS retains neither the selected PDF nor persistent file access. Offline opening requires your local saved copy and a separate PDF viewer. This does not complete the medically reviewed in-app library or deterministic emergency procedures.
+**Ask AEGIS** finds existing English guides without a model. Optional setup adds the exact supported 347.3 MB Qwen file for local matching. Its AI selects an existing reference; unrestricted generated survival instructions are not displayed. Questions clear on leaving. Weights, resource guards and exact-hash installation are unchanged; no weights are bundled in the APK.
 
 ### Illustrated language packs
 
-Library → Guide packs shows measured file/payload sizes, edition, review status and installed state. English edition 2 is included. For optional Filipino/Czech upgrades, download the edition 2 file in an external browser and import it locally. Already transferred files install offline after signature/hash validation. App controls and original source publications remain English.
+English edition 2 is included. Guide downloads shows measured sizes and installed status. Get a pack through the external browser, return and choose Add downloaded pack. App controls remain English; Filipino/Czech guides are draft translations without independent language review.
 
-| Language | Guides | Download bytes | Uncompressed payload | Status |
-| --- | ---: | ---: | ---: | --- |
-| [English edition 2](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-2.aegispack) | 8 | 15,299,971 | 15,704,421 | Included general references |
-| [Filipino edition 2](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-fil-2.aegispack) | 8 | 15,299,980 | 15,705,671 | Optional draft translation |
-| [Czech edition 2](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-field-basics-cs-2.aegispack) | 8 | 15,300,467 | 15,705,299 | Optional draft translation |
+| Pack | Guides | Download size |
+| --- | ---: | ---: |
+| [English](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-field-basics-2.aegispack) | 8 | 15,299,971 bytes |
+| [Filipino](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-field-basics-fil-2.aegispack) | 8 | 15,299,980 bytes |
+| [Czech](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-field-basics-cs-2.aegispack) | 8 | 15,300,467 bytes |
 
-About 15.3 MB each because the actual artwork is included. Database, indexes and temporary import files add storage overhead. These are eight concise guides, not complete survival encyclopedias. Independent specialist/language review remains pending. Four art images are original generated explanatory illustrations; the unmodified original USGS image has its public-domain attribution.
+These unchanged edition-2 packs are concise general references, not complete survival encyclopedias. Source, applicability and general/draft review status remain in each guide. A publisher signature is not clinical or botanical approval.
 
-### Retained tools
+### Verification and limits
 
-- Encrypted kit inventory with quantity/unit, category, location, expiry/replacement, priority and notes; search/due filter.
-- Editable household checklists for eleven scenarios and general planning; user-entered private waypoints.
-- Foreground native GPS with fix age/accuracy/time, magnetic compass, straight-line target distance/true bearing, bounded breadcrumbs, track-start target and explicit unencrypted GPX export. No background/remote tracking or safe-route claim; live state clears on leaving.
-- Credential-gated SQLCipher notes/supplies/tasks/waypoints, automatic background/inactivity lock and encrypted full-content recovery with an independently retained key. Restore replaces all record types explicitly. Native security acceptance remains pending; use nonsensitive private test data.
-- Optional on-device guide assistant and model-free full-text search. Exact verified Qwen3 0.6B INT4 weights are a separate 347,251,840-byte import, not part of the APK. CPU inference requires at least 2 GiB currently available RAM and suitable thermal/battery conditions. Closed guide identifiers select existing cited English text; unrestricted generated advice is not displayed. Questions/matches are ephemeral. Full conversational RAG is unfinished.
+111 host tests pass; final build/lint have zero errors. Checks include actual Home destinations, search/saved guides, theme/shortcut retention, large-text access, optional inventory-value retention, large pictures, source disclosures, signature/pack checks, migrations/recovery, private locking, sensor cleanup and AI boundaries. APK signer continuity, permissions, nonexported components and ARM64 16 KiB ZIP/ELF alignment are audited. INTERNET remains absent; existing optional location and network-state permissions are unchanged.
 
-### Verification and remaining work
+Host previews/tests use API 35 and are not physical S25 tests or a user study. Device security/sensors/maps/AI qualification remains pending; use nonsensitive private test records until security acceptance. The full master project remains unfinished: reviewed medical/species content, detailed regional maps, country/radio collections, family communication, broader RAG, production hardening and iOS delivery remain open. This is a development-signed build, minimum Android 10 / API 29, target Android 17 / API 37, ARM64.
 
-**107 automated host tests pass; build/lint have zero errors.** Actual large-PNG reader/zoom/example and old-bookmark upgrade tests run with native Skia on API 35. Other tests cover map style/data closure, explicit publisher/document-picker actions, signed pack validation, migrations/recovery, private tools, AI output/source boundaries, permission refusal and sensor cleanup. APK signer continuity, exact signed packs, nonexported components, absence of INTERNET, ARM64 and 16 KiB ZIP/ELF alignment are audited.
-
-Host results are not S25 driver/sensor, security, clinical or language approval. This update's native world map, vault, sensors and assistant quality/resource behavior still need physical qualification. No repeat of earlier feasibility diagnostics is required to install.
-
-**The master specification remains unfinished.** Qualified in-app first aid and plant/fruit/mushroom/animal-food references, detailed regional maps, country/radio datasets, private-group communications, broader RAG/model catalogs, production hardening and iOS delivery remain open. No species-edibility verdict or fabricated clinical guidance is supplied. Minimum Android 10 / API 29, target Android 17 / API 37, ARM64, development signing.
-
-APK: 96,164,358 bytes (96.2 MB). SHA-256:
+SHA-256:
 
 ```text
-7265719791cc28f93bcba4b3f92a53ecc668d764f3ec11340ad3da882e56ffb6
+7ad5bb3efcac7876a9a5319e960cc89be76a8d6e072d28558a2db96a526f2e39
 ```
 
-Earlier [0.7 assistant APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-assistant-S25-0.7.0.apk), [0.6 field tools APK](https://github.com/Aimon-Auru/Project-Aegiss/raw/refs/heads/main/apk/AEGIS-fieldtools-S25-0.6.0.apk), older guide/vault/foundation APKs and separate Feasibility artifacts remain historical. Prefer the current version; do not downgrade a populated app.
+[Previous 0.8 illustrated APK](https://raw.githubusercontent.com/Aimon-Auru/Project-Aegiss/refs/heads/main/apk/AEGIS-illustrated-S25-0.8.0.apk) and older artifacts remain historical. Prefer the current version and do not downgrade a populated app.
